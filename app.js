@@ -25,6 +25,19 @@ app.post("/api/v1/", async (req, res) => {
     res.json(resp.data)
 });
 
+app.post("/api/v2/", async (req, res) => {
+
+    const { location } = req.body
+    const resp = await axios.get("https://api.yelp.com/v3/businesses/search", { params: { location: location, limit: "50", categories: "parking" } })
+    const total = (resp.data.total)
+    let offset = 0
+    if (total > 50) {
+        offset = total - 50
+    }
+    const resp2 = await axios.get("https://api.yelp.com/v3/businesses/search", { params: { location: location, offset: offset, limit: "50", categories: "parking", sort_by: "rating" } })
+    res.json(resp2.data)
+});
+
 app.listen(port, () => {
     console.log(`Server successfully created on Port: ${port}`);
 });
