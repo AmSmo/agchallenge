@@ -1,1 +1,1 @@
-modules.export = { API_KEY: "Bearer WK5R9TAzQUwkV2vf6PCUu55a0h9Si7qOYB6tv-Ms88uWGh89i4unx8oYjkzByVT23ac5KWXfUrrgxdZAv_dyr2KYP3aTQErvtvgI55GGu9ZV65yMt_7zXH9dwvIuYHYx" }
+module.exports = { API_KEY: "Bearer WK5R9TAzQUwkV2vf6PCUu55a0h9Si7qOYB6tv-Ms88uWGh89i4unx8oYjkzByVT23ac5KWXfUrrgxdZAv_dyr2KYP3aTQErvtvgI55GGu9ZV65yMt_7zXH9dwvIuYHYx" }
